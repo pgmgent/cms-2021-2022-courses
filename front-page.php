@@ -2,7 +2,11 @@
 
 get_header();
 
-echo get_bloginfo('name');
-echo get_bloginfo('description');
+get_template_part('components/hero', 'hero', [
+    "tagline" => get_field('tagline'),
+    "title" => get_the_title(),
+    "content" => get_the_content(),
+    "id" => get_the_ID(),
+]);
 
 get_footer();

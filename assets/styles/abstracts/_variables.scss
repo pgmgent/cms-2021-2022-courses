@@ -1,2 +1,20 @@
-$primary: #3E80FF;
-$secondary: #7E57FF;
+$primary: #1867ff;
+$secondary: #24126A;
+$white: #FFF;
+
+$enable-negative-margins: true;
+
+$font-family-base: 'DM Sans', 'sans-serif';
+$headings-font-family: 'Spartan', 'sans-serif';
+$headings-font-weight: 700;
+$headings-line-height: 3.75rem;
+
+$navbar-padding-y: 1rem;
+$navbar-dark-color: $white;
+$navbar-dark-hover-color: $primary;
+$navbar-dark-disabled-color: rgba($white, .25);
+
+$btn-border-radius: 2rem;
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 1.5rem;
+$btn-font-weight: 500;

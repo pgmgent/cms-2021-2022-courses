@@ -1,0 +1,11 @@
+@import '../abstracts/variables';
+
+.wp-block-button__link {
+    display: inline-block;
+    background-color: $primary;
+    font-weight: $btn-font-weight;
+
+    &:hover {
+        background-color: darken($primary, 10);
+    }
+}
