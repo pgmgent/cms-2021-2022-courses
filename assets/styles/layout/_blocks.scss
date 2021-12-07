@@ -1,5 +1,9 @@
 @import '../abstracts/variables';
 
+.wp-block-buttons {
+	display: inline-flex;
+}
+
 .wp-block-button__link {
     display: inline-block;
     background-color: $primary;

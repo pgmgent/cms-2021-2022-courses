@@ -1,4 +1,4 @@
-<section class="bg-secondary text-white position-relative pt-2 pt-lg-5">
+<section class="bg-secondary text-white position-relative pt-5">
     <div class="container pt-0 pt-lg-5">
         <div class="row align-items-center">
             <div class="col-lg-5 col-md-12 col-12">
