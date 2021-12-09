@@ -1,0 +1,12 @@
+.wp-block-buttons {
+  display: inline-flex;
+}
+
+.wp-block-button__link {
+  display: inline-block;
+  background-color: #1867ff;
+  font-weight: 500;
+}
+.wp-block-button__link:hover {
+  background-color: #004ee4;
+}

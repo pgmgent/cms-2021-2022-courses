@@ -1,0 +1,8 @@
+@import '../abstracts/variables';
+
+.breadcrumb-item {
+    a {
+        text-decoration: none;
+        color: $white;
+    }
+}

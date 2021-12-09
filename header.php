@@ -7,7 +7,7 @@
 
     <?php wp_head(); ?>
 </head>
-<body>
+<body class="d-flex flex-column h-100 <?php body_class(); ?>">
     <!-- Start Header Area -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
         <div class="container">

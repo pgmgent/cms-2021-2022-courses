@@ -1,7 +1,9 @@
 @import './abstracts/variables';
+@import './base/base';
 @import './base/typography';
+@import './components/breadcrumbs';
+@import './components/img';
 @import './components/logo';
 @import './vendors/fonts';
 @import './vendors/fonts';
 @import './vendors/bootstrap';
-@import './layout/blocks';

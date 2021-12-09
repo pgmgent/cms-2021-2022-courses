@@ -14,7 +14,7 @@ get_template_part('components/cards', 'cards', [
     "main-title" => "Our features",
     "description" => "Occaecat nisi amet laboris cupidatat. Ullamco id est tempor adipisicing ullamco occaecat laboris fugiat. Esse mollit magna excepteur voluptate anim nisi aliquip.",
     "cards" => new WP_Query([
-        'post_type' => 'post',
+        'post_type' => 'feature',
         'posts_per_page' => 3
     ])
 ]);
