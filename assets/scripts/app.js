@@ -1,2 +1,2 @@
 import 'bootstrap';
-import './blocks';
+import './autocomplete';

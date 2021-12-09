@@ -11,9 +11,9 @@ function add_widgets() {
     register_sidebar( array(
         'name' => 'Post Widget Area',
         'id' => 'post_widgets',
-        'before_widget' => '<div class="card shadow p-2 p-sm-4 mb-4">',
+        'before_widget' => '<div class="card shadow p-2 p-sm-4 mb-4 border-3 border-start-0 border-end-0 border-primary border-bottom-0">',
         'after_widget' => '</div>',
-        'before_title' => '<strong class="d-block fs-4 mb-4 fw-light">',
+        'before_title' => '<strong class="d-block fs-4 fw-light mb-3">',
         'after_title' => '</strong>',
     ) );
 

@@ -9,7 +9,6 @@ get_header();
 
 get_template_part('/components/banner', 'banner', [
     'title' => get_the_title(),
-    'breadcrumbs' => 'Todo'
 ])
 
 ?>

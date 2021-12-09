@@ -1,13 +1,27 @@
-<?php get_header()
-// Default styling in Single.php
-?>
+<?php get_header(); ?>
 
-<div class="container mb-5">
-    <?php the_title(); ?>
+<?php get_template_part('/components/banner', 'banner', [
+    'title' => get_the_title(),
+]) ?>
+
+<div class="container my-5">
+    <div class="row">
+        <article class="col-12 col-md-6 col-lg-8">
+            <?php the_post_thumbnail('large', [
+                'class' => 'img-fluid'
+            ]); ?>
+            
+            <?php the_content(); ?>
+        </article>
+    
+        <aside class="col-12 col-md-6 col-lg-4">
+            <?php
+                if (is_active_sidebar('post_widgets')) {
+                    dynamic_sidebar('post_widgets');
+                }
+            ?>
+        </aside>
+    </div>
 </div>
 
-<?php get_footer() ?>
-
-
-
-
+<?php get_footer();

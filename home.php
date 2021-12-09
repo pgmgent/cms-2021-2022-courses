@@ -2,48 +2,31 @@
 
 get_header();
 
+get_template_part('/components/banner', 'banner', [
+    'title' => 'Blog',
+    'breadcrumbs' => false
+])
+
 ?>
 
 <div class="container my-5">
-    <h2>Latest blog posts</h2>
-
     <?php
-        $args = [
-            'post_type' => 'post',
-            'posts_per_page' => 3,
-        ];
+        if ( have_posts() ) {
+            echo "<ul class='row list-unstyled'>";
 
-        $loop = new WP_Query($args);
-    ?>
+            while ( have_posts() ) {
+                the_post();
+                echo "<li class='col-12 col-sm-6 col-md-4 col-lg-3'>";
+                get_template_part( "/content/" . get_post_type(), get_post_type() );
+                echo "</li>";
+            }
 
-<!-- 'meta_query' => [
-                'relation' => 'AND',
-                [
-                    'key' => 'author',
-                    'value' => 'pgm_gebruiker'
-                ],
-                [
-                    'key' => 'date',
-                    'value' => ''
-                ]
-            ] -->
-
-    <div class="row">
-        <?php while($loop->have_posts()) : $loop->the_post() ?>
-            <div class="col-4">
-                <a class="card p-4">
-                    <?php the_title(); ?>
-                </a>
-            </div>
-        <?php endwhile ?>
-        <?php wp_reset_postdata(); ?>
-    </div>
-
-    <?php
-        $arrayLoop = get_posts($args);
-
-        var_dump($loop);
-        var_dump($arrayLoop);
+            echo "</ul>";
+        } else {
+            echo "<div class='d-flex flex-column justify-content-center align-items-center py-5'>";
+            echo "<strong class='fs-5 d-block mb-4'>Er zijn geen berichten.</strong>";
+            echo "</div>";
+        }
     ?>
 </div>
 

@@ -17,7 +17,7 @@ function the_breadcrumbs() {
             $categories = get_the_category();
 
             foreach($categories as $category) {
-                echo "<li class='breadcrumb-item'><a href='" . get_category_link($category->cat_ID) . "'>" . $category->cat_name . "</li>";
+                echo "<li class='breadcrumb-item'><a href='" . get_category_link($category->cat_ID) . "'>" . $category->cat_name . "</a></li>";
             }
         } elseif (is_archive() || is_single()){
             if ( is_day() ) {

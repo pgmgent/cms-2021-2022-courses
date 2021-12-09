@@ -9,7 +9,7 @@
 </head>
 <body class="d-flex flex-column h-100 <?php body_class(); ?>">
     <!-- Start Header Area -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary z-10">
         <div class="container">
             <?php the_custom_logo(); ?>
 
@@ -30,7 +30,8 @@
                     ?>
                 </ul>
 
-                <ul class="list-unstyled my-0">
+                <ul class="list-unstyled my-0 d-flex align-items-center">
+                    <?php get_template_part( 'components/autocomplete', 'autocomplete'); ?>
                     <?php
                         wp_nav_menu([
                             'theme_location' => 'primary_buttons_menu',
