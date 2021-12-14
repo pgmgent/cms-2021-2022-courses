@@ -36,6 +36,7 @@ function register_routes() {
     register_rest_route('cryptoland', '/search', [
         'methods' => 'GET',
         'callback' => 'rest_api_search',
+        'permission_callback' => '__return_true',
     ]);
 }
 
