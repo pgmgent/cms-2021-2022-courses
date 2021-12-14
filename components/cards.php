@@ -7,7 +7,7 @@
         <ul class="row unstyled-list m-0 p-0 my-4">
             <?php while($args['cards']->have_posts()) : $args['cards']->the_post() ?>
                 <li class="list-unstyled col-12 col-md-6 col-lg-4 pb-4">
-                    <a class="card text-black-50 shadow-lg text-decoration-none p-2 p-sm-4 text-center h-100" href="<?php the_permalink(); ?>">
+                    <div class="card text-black-50 shadow-lg text-decoration-none p-2 p-sm-4 text-center h-100">
                         <?php the_post_thumbnail('post-thumbnail', [
                             'class' => 'img-fluid p-4 pb-3 mx-auto'
                         ]) ?>
@@ -24,8 +24,13 @@
                                     echo wp_trim_words( get_the_content(), 100 );
                                 }
                             ?>
+
+                            <a class="btn btn-outline-secondary mt-4" href="<?php the_permalink(); ?>">
+                               <!-- <?php echo __('Meer lezen', 'cryptoland') ?> -->
+                               <?php _e('Meer lezen', 'cryptoland') ?>
+                            </a>
                         </div>
-                    </a>
+                    </div>
                 </li>
             <?php endwhile ?>
         </ul>
