@@ -9,6 +9,21 @@ get_template_part('components/hero', 'hero', [
     "id" => get_the_ID(),
 ]);
 
+?>
+
+<div class="card">
+    <?php the_title() ?>
+
+    <a href="<?php the_permalink() ?>">
+        <?php echo __('PGM Rules', 'cryptoland'); ?>
+        <?php _e('Read more', 'cryptoland'); ?>
+        <?php echo esc_html__('Read more', 'cryptoland'); ?>
+        <?php esc_html_e('Read more', 'cryptoland'); ?>
+    </a>
+</div>
+
+<?php
+
 get_template_part('components/cards', 'cards', [
     "top-title" => "Why choose us",
     "main-title" => "Our features",

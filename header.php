@@ -20,13 +20,15 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav m-auto my-2 my-lg-0 navbar-nav-scroll">
                     <?php
-                        wp_nav_menu([
-                            'theme_location' => 'primary_menu',
-                            'container' => 'false',
-                            'li_class' => 'nav-item link-light mx-lg-3',
-                            'link_class' => 'fw-medium nav-link',
-                            'items_wrap'    => '%3$s',
-                        ]) 
+                        if (has_nav_menu('primary_menu')) {
+                            wp_nav_menu([
+                                'theme_location' => 'primary_menu',
+                                'container' => 'false',
+                                'li_class' => 'nav-item link-light mx-lg-3',
+                                'link_class' => 'fw-medium nav-link',
+                                'items_wrap'    => '%3$s',
+                            ]);
+                        }
                     ?>
                 </ul>
 

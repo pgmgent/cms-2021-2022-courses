@@ -2,7 +2,7 @@
 
 function register_custom_menus() {
     register_nav_menus([
-        'primary_menu' => 'Hoofdmenu',
+        'primary_menu' => __('Hoofdmenu'),
         'primary_buttons_menu' => 'Hoofdmenu Knoppen',
         'social_menu' => 'Social Media Menu'
     ]);
