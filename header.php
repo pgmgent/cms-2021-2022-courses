@@ -44,6 +44,16 @@
                         ]) 
                     ?>
                 </ul>
+                
+                <?php if (is_user_logged_in()) : ?>                    
+                    <a class="d-block ms-2 btn btn-danger" href="<?php echo wp_logout_url(home_url()); ?>">
+                        <?php _e('Sign out', 'cryptoland'); ?>
+                    </a>
+                <?php else : ?>
+                    <a class="d-block ms-2 btn btn-light" href="<?php echo wp_registration_url(); ?>">
+                        <?php _e('Register', 'cryptoland'); ?>
+                    </a>
+                <?php endif ?>
             </div>
         </div>
     </nav>

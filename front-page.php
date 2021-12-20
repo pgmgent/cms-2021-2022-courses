@@ -34,4 +34,8 @@ get_template_part('components/cards', 'cards', [
     ])
 ]);
 
+if (!is_user_logged_in()) {
+    wp_login_form();
+}
+
 get_footer();
